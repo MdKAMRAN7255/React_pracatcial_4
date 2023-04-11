@@ -38,3 +38,15 @@ My UI look like this:
       
 I store all the data which is showing in table in actionReducer.js. And even after hover over the table row, modal is getting data from there only.
 
+Inside TableData.js 
+I add mouseEvent on row(<tr>) so that whenever we take their mouse over the row and remove our mouse it call that mouse event.
+On mouse hover, I add onMouseEnter Event which dispatch ShowModaled action with that particular index of the row
+And if we remove our mouse from that row OnMouseLeave Event will be called and it dispatch the same which help in change the toggle data to false so that modal will disappear.
+  <img src="https://github.com/MdKAMRAN7255/Screenshot/blob/90eb02d46f99ecb147d1724832866cf2a3d35a7a/Pracatical4S/dispatch.png" />
+  
+ And Inside indexAction.js I pass the index of that row to reducer so that he can filter out that row for modal
+  <img src="https://github.com/MdKAMRAN7255/Screenshot/blob/90eb02d46f99ecb147d1724832866cf2a3d35a7a/Pracatical4S/action%20creator.png" />
+  
+And Inside reducer fucntion I filter the index value and store it inside a separate variable and get that variable with the help of useSelector in modal.js
+  
+  <img src="https://github.com/MdKAMRAN7255/Screenshot/blob/90eb02d46f99ecb147d1724832866cf2a3d35a7a/Pracatical4S/reducer.png" />
