@@ -50,3 +50,6 @@ And if we remove our mouse from that row OnMouseLeave Event will be called and i
 And Inside reducer fucntion I filter the index value and store it inside a separate variable and get that variable with the help of useSelector in modal.js
   
   <img src="https://github.com/MdKAMRAN7255/Screenshot/blob/90eb02d46f99ecb147d1724832866cf2a3d35a7a/Pracatical4S/reducer.png" />
+  
+  
+*** Please wait for few second for loading the page first because of high quality of image. And just because of this hover is not working properly for the first few second.***
