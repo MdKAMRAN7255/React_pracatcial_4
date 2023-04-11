@@ -1,70 +1,40 @@
-# Getting Started with Create React App
+# React Practical 4 (User_List_App (UI/UX))
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+I have Created a react app using CRA.
+I used these following librabry for this Practical
+  1. Bootstrap
+  2. React-redux
 
-## Available Scripts
+This is my folder structure for this app.
 
-In the project directory, you can run:
+![Screenshot from 2023-04-11 18-09-22](https://user-images.githubusercontent.com/122250114/231164892-755c4e32-e975-47d1-a088-44dfcb5bdb89.png)
 
-### `npm start`
+Inside src folder I created a component directory inside which I created a different folder witch folder name according to their purpose.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+I used Redux concept in this pratical and made the data flow unidirectional.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+I do not use combinator in this practical because their is only one reducer for this practical. But I knew the concept of combinator & I also practise this. In feature there are multiple reducer then definitely I will use this.
 
-### `npm test`
+My UI look like this:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+1. For Laptop Screen 
+    1. If row of table is not hover
+     <img src="https://github.com/MdKAMRAN7255/Screenshot/blob/5195a412e4138f97758630ef5459647dace7e758/Pracatical4S/fullscreen.png" />
+     
+    2. If row of table is hover
+      <img src="https://github.com/MdKAMRAN7255/Screenshot/blob/5195a412e4138f97758630ef5459647dace7e758/Pracatical4S/fullScreen_with_hover.png" />
+      
+2. For Tab Screen: 
+   1. If row of table is not hover
+      <img src="https://github.com/MdKAMRAN7255/Screenshot/blob/5195a412e4138f97758630ef5459647dace7e758/Pracatical4S/tab.png" />
+    2. If row of table is hover
+      <img src="https://github.com/MdKAMRAN7255/Screenshot/blob/5195a412e4138f97758630ef5459647dace7e758/Pracatical4S/tabletWithHover.png" />
 
-### `npm run build`
+3. For Mobile Screen: 
+   1. If row of table is not hover
+      <img src="https://github.com/MdKAMRAN7255/Screenshot/blob/5195a412e4138f97758630ef5459647dace7e758/Pracatical4S/phone.png" />
+    2. If row of table is hover
+      <img src="https://github.com/MdKAMRAN7255/Screenshot/blob/5195a412e4138f97758630ef5459647dace7e758/Pracatical4S/phoneWithHover.png" />
+      
+I store all the data which is showing in table in actionReducer.js. And even after hover over the table row, modal is getting data from there only.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
