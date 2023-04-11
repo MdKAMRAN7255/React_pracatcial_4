@@ -4,7 +4,6 @@ import "./index.css";
 import { useSelector } from "react-redux";
 function Modal() {
   const modalshow = useSelector((state) => state);
-  console.log(modalshow.hoverData);
   return (
     <>
       {modalshow.modalToggle &&
@@ -14,7 +13,7 @@ function Modal() {
             className="py-3 col-md-8 col-9 d-flex justify-content-end justify-content-sm-center flex-column"
             key={index}
           >
-            <div className="row d-flex justify-content-center flex-column py-5 modal-border border">
+            <div className="row d-flex justify-content-center flex-column py-4 modal-border border">
               <div className="col-12 d-flex justify-content-center flex-column text-center">
                 <div className="col-12 d-flex justify-content-center">
                   <img
@@ -63,14 +62,14 @@ function Modal() {
                 </div>
                 <div className="col-12 mt-3 d-flex justify-content-center text-center position-relative">
                   <div className="col-5">
-                    <p className="p-0 m-0 display-5">2,450</p>
+                    <p className="p-0 m-0 display-5">{data.click_reviewd}</p>
                     <span>Click reviewd</span>
                   </div>
                   <div className="col-2">
                     <div className="vertical"></div>
                   </div>
                   <div className="col-5">
-                    <p className="p-0 m-0 display-5">5000</p>
+                    <p className="p-0 m-0 display-5">{data.monthly_reviewd}</p>
                     <span>Monthly clicks</span>
                   </div>
                 </div>

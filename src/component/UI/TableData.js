@@ -45,7 +45,7 @@ function TableData() {
                 </td>
                 <td className="px-0">
                   {list.status === "Active" ? (
-                    <span className="text-success fw-normal ps-1">Active</span>
+                    <span className="text-success fw-bold ps-1">Active</span>
                   ) : (
                     <select
                       className="form-select border border-0 select"
@@ -60,7 +60,23 @@ function TableData() {
                     </select>
                   )}
                 </td>
-                <td>{list.access}</td>
+                <td>
+                  {list.access === "Owner" ? (
+                    <span className="fw-bold ps-1">Owner</span>
+                  ) : (
+                    <select
+                      className="form-select border border-0 select"
+                      aria-label="Default select example"
+                    >
+                      <option value="1" className="bg-light">
+                        {list.access}
+                      </option>
+                      <option value="2" className="bg-light">
+                        Read
+                      </option>
+                    </select>
+                  )}
+                </td>
                 <td>
                   <img src={list.icon} width="25px" height="25px" />
                 </td>

@@ -15,54 +15,70 @@ const data = {
       email: "george.bluth@reqres.in",
       src: boy1,
       status: "Active",
-      access: "owner",
+      access: "Owner",
       progress: 25,
-      icon: lock
+      icon: lock,
+      click_reviewd: 2450,
+      monthly_reviewd: 5000
     },
     {
       name: "Janet Weaver",
       email: "janet.weaver@reqres.in",
       src: girl1,
       status: "Inactive",
-      access: "owner",
+      access: "Manager",
       progress: 20,
-      icon: deleted
+      icon: deleted,
+      click_reviewd: 2050,
+      monthly_reviewd: 3000,
+      click_reviewd: 2850,
+      monthly_reviewd: 8000
     },
     {
       name: "Emma wong",
       email: "emma.wong@reqres.in",
       src: girl2,
       status: "Inactive",
-      access: "owner",
-      progress: 55,
-      icon: deleted
+      access: "Manager",
+      progress: 45,
+      icon: deleted,
+      click_reviewd: 2950,
+      monthly_reviewd: 6000,
+      click_reviewd: 2250,
+      monthly_reviewd: 8600
     },
     {
       name: "Eve Holt",
       email: "eve.jolt@reqres.in",
       src: boy2,
       status: "Inactive",
-      access: "owner",
+      access: "Manager",
       progress: 75,
-      icon: deleted
+      icon: deleted,
+      click_reviewd: 3450,
+      monthly_reviewd: 6800
     },
     {
       name: "Charles Morris",
       email: "charles.morris@reqres.in",
       src: boy3,
       status: "Inactive",
-      access: "owner",
-      progress: 66,
-      icon: deleted
+      access: "Manager",
+      progress: 36,
+      icon: deleted,
+      click_reviewd: 9450,
+      monthly_reviewd: 15506
     },
     {
       name: "Tracey Ramos",
       email: "tracey.ramos@reqres.in",
       src: boy4,
       status: "Inactive",
-      access: "owner",
+      access: "Manager",
       progress: 70,
-      icon: deleted
+      icon: deleted,
+      click_reviewd: 4450,
+      monthly_reviewd: 2106
     },
   ],
   modalToggle: false,
@@ -70,7 +86,6 @@ const data = {
 const indexReducer = (state = data, action) => {
   switch (action.type) {
     case "showdata":
-      console.log(state.list);
       return [...state];
 
      case "showmodal":
@@ -78,7 +93,6 @@ const indexReducer = (state = data, action) => {
       const hoverData = state.list.filter(
         (item, index) => index === action.payload
       );
-      console.log(state)
       return {
         ...state,
         modalToggle: newToggle,
