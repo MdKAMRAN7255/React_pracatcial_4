@@ -1,6 +1,7 @@
 # React Practical 4 (User_List_App (UI/UX))
 
 I have Created a react app using CRA.
+
 I used these following librabry for this Practical
   1. Bootstrap
   2. React-redux
@@ -36,15 +37,22 @@ My UI look like this:
     2. If row of table is hover
       <img src="https://github.com/MdKAMRAN7255/Screenshot/blob/5195a412e4138f97758630ef5459647dace7e758/Pracatical4S/phoneWithHover.png" />
       
+ **U can noyice that for the active user data will be button and a dot over the name is green and for the inactive user button bg-color will be orange and a dot over the name is red in color.**
+ 
 I store all the data which is showing in table in actionReducer.js. And even after hover over the table row, modal is getting data from there only.
 
 Inside TableData.js 
+
 I add mouseEvent on row(<tr>) so that whenever we take their mouse over the row and remove our mouse it call that mouse event.
-On mouse hover, I add onMouseEnter Event which dispatch ShowModaled action with that particular index of the row
+
+On mouse hover, I add onMouseEnter Event which dispatch ShowModaled action with that particular index of the row.
+
 And if we remove our mouse from that row OnMouseLeave Event will be called and it dispatch the same which help in change the toggle data to false so that modal will disappear.
+
   <img src="https://github.com/MdKAMRAN7255/Screenshot/blob/90eb02d46f99ecb147d1724832866cf2a3d35a7a/Pracatical4S/dispatch.png" />
   
  And Inside indexAction.js I pass the index of that row to reducer so that he can filter out that row for modal
+ 
   <img src="https://github.com/MdKAMRAN7255/Screenshot/blob/90eb02d46f99ecb147d1724832866cf2a3d35a7a/Pracatical4S/action%20creator.png" />
   
 And Inside reducer fucntion I filter the index value and store it inside a separate variable and get that variable with the help of useSelector in modal.js
@@ -52,4 +60,4 @@ And Inside reducer fucntion I filter the index value and store it inside a separ
   <img src="https://github.com/MdKAMRAN7255/Screenshot/blob/90eb02d46f99ecb147d1724832866cf2a3d35a7a/Pracatical4S/reducer.png" />
   
   
-*** Please wait for few second for loading the page first because of high quality of image. And just because of this hover is not working properly for the first few second.***
+***Please wait for few second for loading the page first because of high quality of image. And just because of this hover is not working properly for the first few second.***
