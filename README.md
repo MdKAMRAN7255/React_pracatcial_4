@@ -37,7 +37,7 @@ My UI look like this:
     2. If row of table is hover
       <img src="https://github.com/MdKAMRAN7255/Screenshot/blob/5195a412e4138f97758630ef5459647dace7e758/Pracatical4S/phoneWithHover.png" />
       
- **U can notice that for the active user data will be button and a dot over the name is green and for the inactive user button bg-color will be orange and a dot over the name is red in color.**
+ **U can notice that for the active user button and a dot over the name is green and for the inactive user button bg-color will be orange and a dot over the name is red in color.**
  
 I store all the data which is showing in table in actionReducer.js. And even after hover over the table row, modal is getting data from there only.
 
