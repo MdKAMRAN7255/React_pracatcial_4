@@ -6,7 +6,6 @@ import { showModaled } from "../action/indexAction";
 
 function TableData() {
   const data = useSelector((state) => state.list);
-  console.log(data)
   const dispatch = useDispatch();
 
   return (
