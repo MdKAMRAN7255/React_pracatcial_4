@@ -85,11 +85,11 @@ const data = {
 };
 const indexReducer = (state = data, action) => {
   switch (action.type) {
-    case "showdata":
-      return [...state];
-
-     case "showmodal":
+    case "showmodal":
+      // change the toggle on hover if true then false and if false then true
       const newToggle = !state.modalToggle;
+
+      //getting only those data which is hovered with the help of index and filter method
       const hoverData = state.list.filter(
         (item, index) => index === action.payload
       );

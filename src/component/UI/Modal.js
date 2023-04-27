@@ -3,12 +3,13 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "./index.css";
 import { useSelector } from "react-redux";
 function Modal() {
-  const modalshow = useSelector((state) => state);
+  const modalshow = useSelector((state) => state.hoverData);
+  const modalToggle = useSelector((state) => state.modalToggle);
   return (
     <>
-      {modalshow.modalToggle &&
-        modalshow.hoverData &&
-        modalshow.hoverData.map((data, index) => (
+      {modalToggle &&
+        modalshow &&
+        modalshow.map((data, index) => (
           <div
             className="py-3 col-md-8 col-9 d-flex justify-content-end justify-content-sm-center flex-column"
             key={index}

@@ -5,7 +5,8 @@ import { useSelector, useDispatch } from "react-redux";
 import { showModaled } from "../action/indexAction";
 
 function TableData() {
-  const data = useSelector((state) => state);
+  const data = useSelector((state) => state.list);
+  console.log(data)
   const dispatch = useDispatch();
 
   return (
@@ -20,8 +21,8 @@ function TableData() {
           </tr>
         </thead>
         <tbody>
-          {data.list &&
-            data.list.map((list, index) => (
+          {data &&
+            data.map((list, index) => (
               <tr
                 key={index}
                 onMouseEnter={() => dispatch(showModaled(index))}
